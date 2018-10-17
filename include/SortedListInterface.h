@@ -1,5 +1,6 @@
-#ifndef SORTED_LIST_INTERFACE_H_
-#define SORTED_LIST_INTERFACE_H_
+// #ifndef SORTED_LIST_INTERFACE_H_
+// #define SORTED_LIST_INTERFACE_H_
+#pragma once
 
 template<class ItemType>
 class SortedListInterface
@@ -24,4 +25,4 @@ public:
 	virtual ~SortedListInterface() {}
 };
 
-#endif
+// #endif

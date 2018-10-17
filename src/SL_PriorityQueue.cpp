@@ -1,5 +1,5 @@
 #include "SL_PriorityQueue.h"
-#include<iostream>
+#include <iostream>
 
 
 template<class ItemType>

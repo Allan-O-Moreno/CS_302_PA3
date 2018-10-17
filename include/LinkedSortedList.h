@@ -1,6 +1,6 @@
-#ifndef LINKED_SORTED_LIST
-#define LINKED_SORTED_LIST
-
+// #ifndef LINKED_SORTED_LIST
+// #define LINKED_SORTED_LIST
+#pragma once
 
 #include <memory>
 #include "SortedListInterface.h"
@@ -37,8 +37,8 @@ public:
   int getLength() const;
   bool remove(int position);
   void clear();
-std::shared_ptr<Node<ItemType> > getEntry(int position) const throw(PrecondViolatedExcept);
+  ItemType getEntry(int position) const throw(PrecondViolatedExcept);
 }; //end LinkedSortedList
 
-
-#endif
+// #include "LinkedSortedList.cpp"
+// #endif

@@ -1,5 +1,6 @@
-#ifndef PRIORITY_QUEUE_
-#define PRIORITY_QUEUE_
+// #ifndef PRIORITY_QUEUE_
+// #define PRIORITY_QUEUE_
+#pragma once
 
 #include "PriorityQueueInterface.h"
 #include "LinkedSortedList.h"
@@ -30,4 +31,6 @@ public:
 
 
 };   //end class
-#endif
+
+// #include "SL_PriorityQueue.cpp"
+// #endif

@@ -1,6 +1,6 @@
 #include "LinkedSortedList.h"
-#include"Node.cpp"
-#include<memory>
+#include "Node.cpp"
+#include <memory>
 
 
 template<class ItemType>
@@ -28,7 +28,7 @@ bool LinkedSortedList<ItemType>::insertSorted(const ItemType& newEntry)
 {
 
 std::shared_ptr<Node<ItemType> > newNodePtr(std::make_shared<Node<ItemType> > (newEntry));
-std::shared_ptr<Node<ItemType> > prevPtr = getNodeBefore(std::make_shared<Node<ItemType> > (newEntry));
+std::shared_ptr<Node<ItemType> > prevPtr = getNodeBefore(newEntry);
 
 // Adding at the beggining
 if(isEmpty() || (prevPtr == nullptr))
@@ -160,7 +160,7 @@ void LinkedSortedList<ItemType>::clear()
   }
 }
 template<class ItemType>
-std::shared_ptr<Node<ItemType> >  LinkedSortedList<ItemType>:: getEntry(int position) const throw(PrecondViolatedExcept)
+ItemType  LinkedSortedList<ItemType>:: getEntry(int position) const throw(PrecondViolatedExcept)
 {
   bool abletoget =(position >= 1) && (position <= items);
 

@@ -1,5 +1,5 @@
-#include "Node.h"
-#include<memory>
+// #include "Node.h"
+#include <memory>
 
 template<class ItemType>
 Node<ItemType>::Node(): next(nullptr)
@@ -31,7 +31,7 @@ void Node<ItemType>::setNext(std::shared_ptr<Node<ItemType> > nextNodePtr)
 }	// end setNext
 
 template<class ItemType>
-std::shared_ptr<Node<ItemType> > Node<ItemType>::getItem() const
+ItemType Node<ItemType>::getItem() const
 {
 	return item;
 }	// end getItem

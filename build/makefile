@@ -11,10 +11,10 @@ all: $(O_FILES)
 main.o: ../src/main.cpp
 	$(CC) $(CXXFLAGS) -c ../src/main.cpp -o main.o $(INCLUDES)
 
-LinkedSortedList.o: ../src/LinkedSortedList.cpp
+LinkedSortedList.o: ../src/LinkedSortedList.cpp ../include/LinkedSortedList.h
 	$(CC) $(CXXFLAGS) -c ../src/LinkedSortedList.cpp -o LinkedSortedList.o $(INCLUDES)
 
-SL_PriorityQueue.o: ../src/SL_PriorityQueue.cpp
+SL_PriorityQueue.o: ../src/SL_PriorityQueue.cpp ../include/SL_PriorityQueue.h
 	$(CC) $(CXXFLAGS) -c ../src/SL_PriorityQueue.cpp -o SL_PriorityQueue.o $(INCLUDES)
 
 clean:

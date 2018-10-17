@@ -1,5 +1,7 @@
-#ifndef NODE_H_
-#define NODE_H_
+// #ifndef NODE_H_
+// #define NODE_H_
+#pragma once
+
 #include<memory>
 template<class ItemType>
 class Node
@@ -13,8 +15,9 @@ public:
 	Node(const ItemType& anItem, std::shared_ptr<Node<ItemType> > nextNodePtr);
 	void setItem(const ItemType& anItem);
 	void setNext(std::shared_ptr<Node<ItemType> > nextNodePtr);
-  std::shared_ptr<Node<ItemType> > getItem() const;
+  ItemType getItem() const;
 	std::shared_ptr<Node<ItemType> >  getNext() const;
 };
 
-#endif /* NODE_H_ */
+// #include "Node.cpp"
+// #endif /* NODE_H_ */

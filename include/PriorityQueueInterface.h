@@ -1,5 +1,6 @@
-#ifndef PRIORITY_QUEUE_INTERFACE_H__
-#define PRIORITY_QUEUE_INTERFACE_H_
+// #ifndef PRIORITY_QUEUE_INTERFACE_H__
+// #define PRIORITY_QUEUE_INTERFACE_H_
+#pragma once
 
 template<class ItemType>
 class PriorityQueueInterface
@@ -30,4 +31,4 @@ public:
 	// Destroys this queue and frees its memory.
 	virtual ~PriorityQueueInterface() {}
 };	// end QueueInterface
-#endif
+// #endif
