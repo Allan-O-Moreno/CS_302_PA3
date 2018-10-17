@@ -21,4 +21,6 @@ int main()
   std::shared_ptr<LinkedSortedList<char> > names(new LinkedSortedList<char>());
   names->insertSorted('a');
   std::cout << names->getPosition('a') << std::endl;
+  names->insertSorted('b');
+  std::cout << names->getPosition('b') << std::endl;
 }
