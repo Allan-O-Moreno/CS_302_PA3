@@ -1,11 +1,12 @@
 #include "SL_PriorityQueue.h"
 #include <iostream>
+// #include <memory>
 
 
 template<class ItemType>
 SL_PriorityQueue<ItemType>::SL_PriorityQueue()
 {
-      slistPtr = new LinkedSortedList<ItemType>();
+  slistPtr = std::unique_ptr<LinkedSortedList<ItemType> >(new LinkedSortedList<ItemType>());
 }
 template<class ItemType>
 SL_PriorityQueue<ItemType>::SL_PriorityQueue(const SL_PriorityQueue& pq)

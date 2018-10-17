@@ -27,24 +27,24 @@ template<class ItemType>
 bool LinkedSortedList<ItemType>::insertSorted(const ItemType& newEntry)
 {
 
-std::shared_ptr<Node<ItemType> > newNodePtr(std::make_shared<Node<ItemType> > (newEntry));
-std::shared_ptr<Node<ItemType> > prevPtr = getNodeBefore(newEntry);
+  std::shared_ptr<Node<ItemType> > newNodePtr(std::make_shared<Node<ItemType> > (newEntry));
+  std::shared_ptr<Node<ItemType> > prevPtr = getNodeBefore(newEntry);
 
-// Adding at the beggining
-if(isEmpty() || (prevPtr == nullptr))
-{
-  newNodePtr->setNext(headPtr);
-  headPtr = newNodePtr;
-}
-else          // or add at the node before
-{
-  std::shared_ptr<Node<ItemType> > aftPtr = prevPtr->getNext();
-  newNodePtr->setNext(aftPtr);
-  prevPtr->setNext(newNodePtr);
-}	// end if
+  // Adding at the beggining
+  if(isEmpty() || (prevPtr == nullptr))
+  {
+    newNodePtr->setNext(headPtr);
+    headPtr = newNodePtr;
+  }
+  else          // or add at the node before
+  {
+    std::shared_ptr<Node<ItemType> > aftPtr = prevPtr->getNext();
+    newNodePtr->setNext(aftPtr);
+    prevPtr->setNext(newNodePtr);
+  }	// end if
 
-items++;
-return true;
+  items++;
+  return true;
 }
 
 template<class ItemType>
