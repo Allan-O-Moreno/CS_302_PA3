@@ -197,7 +197,7 @@ std::shared_ptr<Node<ItemType> > LinkedSortedList<ItemType>::getNodeBefore(const
 	std::shared_ptr<Node<ItemType>> prevPtr;
 
 
-	while( (curPtr != nullptr) && (anEntry > curPtr->getItem()) )
+	while( (curPtr != nullptr) && (anEntry < curPtr->getItem()) )
 	{
 		prevPtr = curPtr;
 		curPtr = curPtr->getNext();
